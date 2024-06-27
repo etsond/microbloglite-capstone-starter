@@ -12,7 +12,7 @@ const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com";
 // You can use this function to get the login data of the logged-in
 // user (if any). It returns either an object including the username
 // and token, or an empty object if the visitor is not logged in.
-function getLoginData () {
+function getLoginData() {
     const loginJSON = window.localStorage.getItem("login-data");
     return JSON.parse(loginJSON) || {};
 }
@@ -20,7 +20,7 @@ function getLoginData () {
 
 // You can use this function to see whether the current visitor is
 // logged in. It returns either `true` or `false`.
-function isLoggedIn () {
+function isLoggedIn() {
     const loginData = getLoginData();
     return Boolean(loginData.token);
 }
@@ -30,9 +30,9 @@ function isLoggedIn () {
 // landing page, in order to process a user's login. READ this code,
 // and feel free to re-use parts of it for other `fetch()` requests
 // you may need to write.
-function login (loginData) {
+function login(loginData) {
     // POST /auth/login
-    const options = { 
+    const options = {
         method: "POST",
         headers: {
             // This header specifies the type of content we're sending.
@@ -47,11 +47,13 @@ function login (loginData) {
         .then(response => response.json())
         .then(loginData => {
             if (loginData.message === "Invalid username or password") {
-                console.error(loginData)
+                // console.error(loginData.message);
+                // console.log(loginData.message)
+                // https://stackoverflow.com/questions/9156176/what-is-the-difference-between-throw-new-error-and-throw-someobject
+                throw new Error(loginData.message)
                 // Here is where you might want to add an error notification 
                 // or other visible indicator to the page so that the user is  
                 // informed that they have entered the wrong login info.
-                return null
             }
 
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
@@ -66,13 +68,13 @@ function login (loginData) {
 // which you may include in various pages in your app. Again, READ this
 // function and you will probably want to re-use parts of it for other
 // `fetch()` requests you may need to write.
-function logout () {
+function logout() {
     const loginData = getLoginData();
 
     // GET /auth/logout
-    const options = { 
+    const options = {
         method: "GET",
-        headers: { 
+        headers: {
             // This header is how we authenticate our user with the
             // server for any API requests which require the user
             // to be logged-in in order to have access.

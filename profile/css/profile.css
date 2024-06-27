@@ -1,6 +1,112 @@
+/* Hide the main content by default */
+#mainContent {
+    display: none;
+}
+
+/* Centered loading screen */
+#loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+}
+/* Body and general styles */
+body {
+    background-color: #f5f8fa;
+    font-family: Arial, sans-serif;
+    color: #14171a;
+    margin: 0;
+    padding: 0;
+}
+/* Navbar styles */
+.navbar {
+    background-color: #1da1f2;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #ffffff !important;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Post form styles */
+#postForm {
+    margin-bottom: 2rem;
+}
+/* Posts container styles */
+#postsContainer {
+    margin-top: 2rem;
+}
+.post {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.post img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post .d-flex {
+    margin-bottom: 0.5rem;
+}
+
+.post strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons styles */
+.like-button,
+.remove-button {
+    margin-right: 10px;
+}
+
+.like-button.liked {
+    color: #e0245e;
+}
+
+.form-label,
+.form-select,
+.btn {
+    font-family: Arial, sans-serif;
+}
+
+/* Modal styles */
+.modal-content {
+    padding: 1rem;
+}
+
+.modal-header,
+.modal-body {
+    padding: 1rem;
+}
+/* Footer styles */
 footer {
     background-color: #1da1f2;
     color: #ffffff;
+    text-align: center;
+    padding: 1rem;
     position: fixed;
     bottom: 0;
     width: 100%;

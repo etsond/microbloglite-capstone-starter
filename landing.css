@@ -1,1 +1,128 @@
 /* Landing Page CSS */
+/* Landing Page CSS */
+body {
+    background-color: #f7f7f7;
+    /* Light grey background resembling paper */
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    /* White background for the form */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    border: 1px solid #b0b0b0;
+    /* Light grey border */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* Notebook style font */
+    color: #2c3e50;
+    /* Dark slate color */
+}
+
+.form-control {
+    border-radius: 0px;
+    /* No rounded corners */
+    border: 1px solid #b0b0b0;
+    /* Light grey border */
+    background-color: #fdfdfd;
+    /* Slightly off-white to resemble paper */
+}
+
+.btn-custom {
+    border-radius: 0px;
+    /* No rounded corners */
+}
+
+.btn-custom-primary {
+    background-color: #ff4757;
+    /* Bright red color for primary buttons */
+    color: #fff;
+    border: 1px solid #ff4757;
+}
+
+.btn-custom-primary:hover {
+    background-color: #e84118;
+    /* Slightly darker red on hover */
+    color: #fff;
+    border: 1px solid #e84118;
+}
+
+.btn-outline-primary {
+    border-color: #ff4757;
+    /* Outline color matching primary button */
+    color: #ff4757;
+    /* Text color matching primary button */
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff4757;
+    color: #fff;
+}
+
+.link-custom {
+    text-decoration: none;
+    color: #ff4757;
+    /* Link color matching primary button */
+}
+
+.link-custom:hover {
+    text-decoration: underline;
+    color: #e84118;
+    /* Darker red on hover */
+}
+
+/* Additional styles */
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    /* Adjust height based on header and footer */
+}
+
+footer {
+    background-color: #1da1f2;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+}
+
+.login-container .form-label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.login-container .form-control {
+    margin-bottom: 15px;
+}
+
+.login-container .btn-primary,
+.login-container .btn-outline-primary {
+    margin-bottom: 15px;
+}

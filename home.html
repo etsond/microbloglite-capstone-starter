@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./home.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./home.html">Secret Notes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./posts/index.html">Post Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../profile/index.html">Profile</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#" id="logoutButton">Logout</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutUs.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="jumbotron" class="jumbotron-container">
+            <video autoplay muted loop class="video-bg" loading="lazy">
+                <source src="./media/writing.mp4" type="video/mp4" />
+                Your browser does not support video, please change browser
+            </video>
+            <div class="overlay">
+                <div class="container">
+                    <h1 class="display-5 fw-bold text-center">
+                        Your Private Sanctuary for Thoughts
+                    </h1>
+                    <hr />
+                    <p class="col-md-12 fs-4 col-lg-12">
+                        Welcome to Secret Notes, delivering quality and exceptional service for over 10 years.
+                    </p>
+                    <div class="text-center">
+                        <a href="./register/register.html" class="btn btn-lg btn-outline-secondary but">Register
+                            Today</a>
+                        <a href="./index.html" class="btn btn-lg btn-outline-secondary but">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- testimonials -->
+
+        <hr />
+
+        <!--  -->
+
+        <div class="carousel-container">
+            <h3 class="text-center">Testimonials</h3>
+            <div id="carouselExampleCaptions" class="carousel slide mt-5">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img loading="lazy" src="./media/small11.jpg" class="d-block w-100 img-fluid" alt="..." />
+                        <div class="carousel-caption d-md-block">
+                            <h5>Raj J</h5>
+                            <p class="text-danger">
+                                I absolutely love using Secret Notes! The seamless experience and secure features allow
+                                me to organize my thoughts
+                                effortlessly. It’s a delightful tool that I look forward to using every day.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img loading="lazy" src="./media/small22.jpg" class="d-block w-100 img-fluid"
+                            alt="picture of Mark" />
+                        <div class="carousel-caption d-md-block">
+                            <h5>Mark T.</h5>
+                            <p class="text-danger">
+                                Secret Notes has transformed the way I organize my thoughts. Its intuitive interface and
+                                robust security features give
+                                me peace of mind knowing my notes are safe. It’s an indispensable tool in my daily
+                                routine. Highly recommended!”
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img loading="lazy" src="./media/small33.jpg" class="d-block w-100 img-fluid"
+                            alt="image of emily" />
+                        <div class="carousel-caption d-md-block">
+                            <h5>Emily R</h5>
+                            <p class="text-danger">
+                                Secret Notes is simply the best! It’s intuitive, secure, and perfectly balances
+                                functionality with privacy. My daily
+                                routine wouldn’t be complete without jotting down my thoughts in this exceptional app.
+                                Highly recommended!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- end of carousel -->
+
+        <div class="container mt-4 mb-4">
+            <h3>Partners</h3>
+            <!-- Shop Now< -->
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 text-bg-light rounded-3">
+                        <h4>Green Leaf Consulting</h4>
+                        <p>
+                            Secret Notes is developed with a commitment to excellence and security. By partnering with
+                            leading cybersecurity
+                            experts, we ensure that each feature is designed with utmost care and respect for your
+                            privacy. This collaboration also
+                            supports the continuous improvement of our app, fostering a community of innovation-driven
+                            professionals who share our
+                            passion for exceptional note-taking solutions.
+                        </p>
+
+                        <a href="https://greenleafgrp.com/" target="_blank"
+                            class="btn btn-outline-secondary but">Website</a>
+                    </div>
+                </div>
+
+                <!-- Serving you since 1776 -->
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                        <h4>Bright Future Tech Solutions</h4>
+                        <p>
+                            Secret Notes sets the standard for secure and efficient note-taking. By collaborating with
+                            top privacy advocates, we
+                            guarantee that every aspect of our app is crafted with precision and respect for your
+                            confidentiality. This partnership
+                            also empowers a network of dedicated developers who share our commitment to delivering
+                            exceptional and trustworthy
+                            digital solutions.
+                        </p>
+                        <!-- <button class="btn btn-outline-secondary but" type="button">
+                            Website
+                        </button> -->
+                        <a href="https://brightfuturetechllc.com/" target="_blank"
+                            class="btn btn-outline-secondary but">Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- adding more content -->
+        <section class="py-5 text-center container" id="story">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h2 class="fw-light">Our Stories</h2>
+                    <p class="lead">
+                        Escape the hustle and bustle with Secret Notes. Unwind in privacy with our secure note-taking
+                        app and enjoy peace of
+                        mind, knowing your thoughts are safe.
+                    </p>
+                    <p>
+                        <a href="./faq.html" class="btn my-2 shadow but">Read More</a>
+                        <a href="./aboutUs.html" class="btn my-2 but">Learn About Us</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="text-center py-4">
+        &copy; 2024 Microblog
+    </footer>
+</body>
+
+</html>

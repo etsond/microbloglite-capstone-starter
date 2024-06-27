@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,27 +27,61 @@
         if (isLoggedIn() === true) window.location.replace("/posts");
     </script>
 </head>
-<body>
 
-    <header>
-        <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./home.html">Secret Notes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Post Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../profile/index.html">Profile</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#" id="logoutButton">Logout</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutUs.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
 
-        <form id="login">
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" minlength="3">
-            </div>
+    <h1 class="">Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
 
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" minlength="6">
-            </div>
+    <main class="d-flex align-items-center justify-content-cente vh-90">
 
-            <button id="loginButton" type="submit">Login</button>
-        </form>
+        <div class="login-container">
+            <form id="login" class="text-center">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input class="form-control" type="text" id="username" minlength="3" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input class="form-control" type="password" id="password" minlength="6" required>
+                </div>
+
+                <button id="loginButton" type="submit">Login</button>
+                <a href="../register/register.html" class="btn btn-outline-primary btn-custom mb-2 mt-2">Create an
+                    Account</a>
+            </form>
+        </div>
 
     </main>
 
@@ -55,4 +90,5 @@
     <!-- Page-specific code -->
     <script src="./landing.js"></script>
 </body>
+
 </html>

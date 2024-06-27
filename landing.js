@@ -3,6 +3,10 @@
 "use strict";
 
 const loginForm = document.querySelector("#login");
+const errorMessage = document.createElement("div");
+
+errorMessage.style.className = "alert alert-danger";
+loginForm.appendChild(errorMessage);
 
 loginForm.onsubmit = function (event) {
     // Prevent the form from refreshing the page,
@@ -20,5 +24,9 @@ loginForm.onsubmit = function (event) {
     loginForm.loginButton.disabled = true;
 
     // Time to actually process the login using the function from auth.js!
-    login(loginData);
+    login(loginData).catch(error => {
+        errorMessage.innerHTML = error.message;
+        errorMessage.style.display = "block";
+        loginForm.loginButton.disabled = false;
+    });
 };

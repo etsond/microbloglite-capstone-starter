@@ -15,34 +15,112 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Notebook Blog</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../profile/index.html">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="logoutButton">Logout</a>
-                        </li>
-                    </ul>
+
+    <!-- section for loading the screen -->
+    <div id="loadingScreen">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div id="mainContent" class="main-content">
+        <header class="header">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../home.html">Notebook Blog</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../posts/index.html">Post Feed</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../profile/index.html">Profile</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="../aboutUs.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="logoutButton">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    </div>
+    </nav>
+    </header>
+    <main class="container mt-5">
+
+        <div class="text-center mb-4">
+
+            <img id="profileImage" src="https://picsum.photos/seed/default/100" alt="Profile Picture"
+                class="profile-img mb-3">
+            <h2 id="username"></h2>
+            <h4 id="fullname"></h4>
+            <p id="profileBio"></p>
+            <button id="editProfileButton" class="btn btn-primary">Edit Profile</button>
+        </div>
+        <div>
+            <h3>Create a New Post</h3>
+            <form id="postForm">
+                <textarea id="postContent" class="form-control mb-2" rows="3" required></textarea>
+                <button type="submit" class="btn btn-success">Post</button>
+            </form>
+        </div>
+        <div class="mt-4">
+            <h3>Your Posts</h3>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <label for="sortOrder" class="form-label">Sort by:</label>
+                <select id="sortOrder" class="form-select w-auto">
+                    <option value="newest">Newest to Oldest</option>
+                    <option value="oldest">Oldest to Newest</option>
+                </select>
+            </div>
+
+            <!-- container for the current user's post -->
+            <div id="postsContainer" class="row"></div>
+        </div>
+    </main>
+
+    <!-- section for modal to edit the ser full name or Bio -->
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProfileForm">
+                        <div class="mb-3">
+                            <label for="editFullname" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="editFullname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editBio" class="form-label">Bio</label>
+                            <textarea class="form-control" id="editBio" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
+    </div>
 
     <footer class="text-center py-4">
         &copy; 2024 Microblog
     </footer>
+    <script src="../auth.js"></script>
     <script src="./js/profile.js"></script>
 </body>
 
