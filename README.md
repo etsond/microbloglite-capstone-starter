@@ -31,12 +31,14 @@ Make sure you have a modern web browser installed. No additional software is req
 1.Don't forget to read the [*MicroblogLite* API docs](http://microbloglite.us-east-2.elasticbeanstalk.com/docs) and experiment with the API in *Postman!*
 
 Practice and experimentation provide experience, and experience provides confidence.
-2. Clone the repository:
 
-    ```bash
-    git clone [https://github.com/etsond/microbloglite-capstone-starter]
-    cd microbloglite-capstone-starter
-    ```
+2. Clone the repository:
+    
+```bash
+git clone https://github.com/etsond/microbloglite-capstone-starter
+```
+    
+
 
 3. Open the `index.html` file in your web browser to start the application.
 
